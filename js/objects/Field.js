@@ -7,7 +7,7 @@ class Field extends Phaser.Sprite {
     this.imgBg.ctx.fillStyle = '#000';
     this.imgBg.ctx.fillRect(0, 0, size, size);
 
-    // Set backgrind image as texture of this sprite
+    // Set background image as texture of this sprite
     this.loadTexture(this.imgBg);
 
     // Set alpha to 20 percent
