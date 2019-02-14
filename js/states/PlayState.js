@@ -9,7 +9,7 @@ class PlayState extends Phaser.State {
     this.bg = new Phaser.Sprite(this.game, 0, 0, 'bg');
 
     // Create board
-    this.board = new Board(this.game, 8, 14, 7, 35, 2, 2);
+    this.board = new Board(this.game, 8, 14, 7, 35, 5, 5);
     this.board.x = this.game.world.centerX - this.board.width  / 2;
     this.board.y = this.game.world.centerY - this.board.height / 2;
     
