@@ -54,8 +54,8 @@ class Board extends Phaser.Group {
 
   createBlock(gx, gy, id) {
     let block = this.blocks.getFirstExists(false),
-        bx    = gx * (this.getBlockSize() + this.gap) + this.padding + this.getBlockSize() / 2,
-        by    = gy * (this.getBlockSize() + this.gap) + this.padding + this.getBlockSize() / 2;
+        bx    = gx * (this.getBlockSize() + this.gap) + this.padding + this.contentSize / 2,
+        by    = gy * (this.getBlockSize() + this.gap) + this.padding + this.contentSize / 2;
 
     if (!block) {
       block = new Block(this.game, bx, by, id);
@@ -168,10 +168,10 @@ class Board extends Phaser.Group {
   }
 
   animateDrop(block, startRow, endRow) {
-    block.y = startRow * (this.getBlockSize() + this.gap) + this.padding + this.getBlockSize() / 2;
+    block.y = startRow * (this.getBlockSize() + this.gap) + this.padding + this.contentSize / 2;
 
     let tween = this.game.add.tween(block);
-    tween.to({y: endRow * (this.getBlockSize() + this.gap) + this.padding + this.getBlockSize() / 2}, Board.TWEEN_TIME);
+    tween.to({y: endRow * (this.getBlockSize() + this.gap) + this.padding + this.contentSize / 2}, Board.TWEEN_TIME);
     tween.start();
   }
 
